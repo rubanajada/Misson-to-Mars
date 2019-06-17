@@ -22,8 +22,6 @@ def home():
 @app.route("/scrape")
 def scrape():
 
-    print ("mohammad ")
-
     mars = client.db.mars
     data = scrape_mars.scrape_info()
     mars.update({}, data, upsert=True)
